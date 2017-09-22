@@ -1,0 +1,60 @@
+<div class="container-fluid dashtab-container">
+    <div class="container">
+        <div class="vspace4"></div>
+        <div class="row ">
+            <div class="col col-md-12">
+                <div class="dashtab-widget">
+                    <div class='dashtab-widget-header'>Bitcoin wallet</div>
+                    <div class="page-header wallet-text">Wallet Address : {{bCWalletAdd}}</div>
+                </div>
+            </div>
+            <div class="col col-md-6">
+                <div class="dashtab-widget">
+                    <div class='dashtab-widget-header'><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp; &nbsp; Send</div>
+                    <div class="col send-container">
+                        <div class="send-tab-text"> Send Funds </div>
+                        <div class="input-group send-input-box">
+                            <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                            <input ng-model="sendToThisAddress" type="text" class="form-control" id="send-input-control" placeholder="Enter wallet address to send funds"
+                                aria-describedby="sizing-addon2">
+                        </div>
+                        <div class="input-group send-input-box">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span></span>
+                            <input ng-model="sendThisAmount" type="number" class="form-control" aria-label="Amount" id="send-input-control" placeholder="Enter amount you want to send">
+                        </div>
+                        <div class="vspace2"></div>
+                        <h6 class="col col-md-12 sign-text" ng-class="{ 'green': sendInfoType=='green' , 'red':sendInfoType=='red'}" ng-cloak>{{sendError}}</h6>
+                        <div class="col">
+                            <button type="button" ng-click="handleSendFunds(sendToThisAddress,sendThisAmount)" class="btn btn-primary send-funds-btn">Send Funds</button>
+                        </div>
+                        <div class="vspace2"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- request Money -->
+            <div class="col col-md-6">
+                <div class="dashtab-widget">
+                    <div class='dashtab-widget-header'><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp; &nbsp; Request</div>
+                    <div class="col send-container">
+                        <div class="send-tab-text"> Request Funds </div>
+                        <div class="input-group send-input-box">
+                            <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                            <input ng-model="requestToThisAddress" type="text" class="form-control" id="send-input-control" placeholder="Enter email address to request funds"
+                                aria-describedby="sizing-addon2">
+                        </div>
+                        <div class="input-group send-input-box">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span></span>
+                            <input ng-model="receiveThisAmount" type="number" class="form-control" aria-label="Amount" id="send-input-control" placeholder="Enter amount you want to request">
+                        </div>
+                        <div class="vspace2"></div>
+                        <h6 class="col col-md-12 sign-text" ng-class="{ 'green': reqInfoType=='green' , 'red': reqInfoType=='red'}" ng-cloak>{{reqError}}</h6>
+                        <div class="col">
+                            <button type="button" ng-click="handleRequestFunds(requestToThisAddress,receiveThisAmount)" class="btn btn-primary send-funds-btn">Request Funds</button>
+                        </div>
+                        <div class="vspace2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

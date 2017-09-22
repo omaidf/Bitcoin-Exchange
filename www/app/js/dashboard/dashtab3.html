@@ -1,0 +1,76 @@
+<div class="container-fluid dashtab-container">
+    <div class="container">
+        <div class="vspace4"></div>
+        <div class="row ">
+            <div class="col col-md-12">
+                <div class="dashtab-widget">
+                    <div class='dashtab-widget-header'>Name</div>
+                    <div ng-show="showEditNameButton" class="page-header wallet-text">{{userName}} <span class="glyphicon glyphicon-edit edit-name-button" aria-hidden="true" ng-click="handleEditName()"></span>
+                    </div>
+                    <div ng-hide="showEditNameButton" class="page-header wallet-text">
+                        <div class="input-group pass-ip">
+                            <input type="text" class="form-control" ng-model="userName">
+                        </div>
+                        <div class="vspace1"></div>
+                        <div class="col pass-ip">
+                            <button class="btn btn-default btn-primary edit-info-button" ng-click="handleNameChange(userName)" type="button">Change Name</button>
+                        </div>
+                        <h6 class="col col-md-12 sign-text" ng-class="{ 'green': nameErrType=='green' , 'red':nameErrType=='red'}" ng-cloak> {{nameErr}}</h6>
+                        <div class="vspace1"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Email Block  -->
+            <div class="col col-md-12">
+                <div class="dashtab-widget">
+                    <div class='dashtab-widget-header'>Email</div>
+                    <div class="page-header wallet-text" ng-cloak>{{userEmail}}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone Block -->
+            <div class="col col-md-12">
+                <div class="dashtab-widget">
+                    <div class='dashtab-widget-header'>Telephone</div>
+                    <div ng-show="showEditPhoneButton" class="page-header wallet-text">{{userPhone}} <span class="glyphicon glyphicon-edit edit-name-button" aria-hidden="true" ng-click="handleEditPhone()"></span>
+                    </div>
+                    <div ng-hide="showEditPhoneButton" class="page-header wallet-text">
+                        <div class="input-group pass-ip">
+                            <input type="text" class="form-control" ng-model="userPhone">
+                        </div>
+                        <div class="vspace1"></div>
+                        <div class="col pass-ip">
+                            <button class="btn btn-default btn-primary edit-info-button" ng-click="handlePhoneChange(userPhone)" type="button">Update Number</button>
+                        </div>
+                        <h6 class="col col-md-12 sign-text" ng-class="{ 'green': phoneErrType=='green' , 'red':phoneErrType=='red'}" ng-cloak> {{phoneErr}}</h6>
+                        <div class="vspace1"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--- Password Block -->
+            <div class="col col-md-12">
+                <div class="dashtab-widget">
+                    <div class='dashtab-widget-header'>Password</div>
+                    <div ng-show="showEditPassButton" class="page-header wallet-text"> &nbsp;.............. <span class="glyphicon glyphicon-edit edit-name-button" aria-hidden="true" ng-click="handleEditPass()"></span>
+                    </div>
+                    <div ng-hide="showEditPassButton" class="page-header wallet-text">
+                        <div class="input-group pass-ip">
+                            <input type="password" class="form-control h55" ng-model="editNewPass1" placeholder="Enter New Password">
+                        </div>
+                        <div class="input-group pass-ip">
+                            <input type="password" class="form-control h55" ng-model="editNewPass2" placeholder="Enter New Password">
+                        </div>
+                        <div class="vspace1"></div>
+                        <div class="col pass-ip">
+                            <button class="btn btn-default btn-primary edit-info-button" ng-click="handlePassChange(editNewPass1,editNewPass2)" type="button">Change Password</button>
+                        </div>
+                        <h6 class="col col-md-12 sign-text" ng-class="{ 'green': passErrType=='green' , 'red':passErrType=='red'}" ng-cloak> {{passErr}}</h6>
+                        <div class="vspace1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

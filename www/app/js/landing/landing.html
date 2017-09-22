@@ -1,0 +1,35 @@
+<div class='container-fluid landing-container'>
+    <div class='container'>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#!/signin">Sign In</a></li>
+                        <li><a href="#!/help">Help</a></li>
+                        <li><a href='' ng-click="handleSignUp()">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <div class="vspace4"></div>
+        <a href="/" class="logo-link"><span class="logo-text"><h2>applogo<h2><span></a>
+        <div>
+            <div class="landing-content">
+                <h1>Buy and Sell digital currency</h1>
+                <p>Bitcoin Exchange is most opiniated way to buy and sell bitcoin, ethereum, and litecoin.</p>
+                <div class="vspace1"></div>
+                <div class="mail_container">
+                    <form accept-charset="UTF-8">
+                        <input class="form-control focus enter-fields" autocomplete="off" type="text" name="email" id="user_email" placeholder="Enter your email address"
+                            ng-model="email">
+                        <input type="submit" value="Get Started" class="btn btn-primary get-started" ng-click="handleSignUp()">
+                    </form>
+                </div>
+                <div class="vspace1"></div>
+            </div>
+        </div>
+    </div>
+</div>

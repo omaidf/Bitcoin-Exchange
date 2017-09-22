@@ -1,0 +1,39 @@
+<div class="container-fluid bg-blue">
+    <header ng-include="'app/js/common/header.html'"></header>
+</div>
+<div class='container'>
+    <div class="vspace4"></div>
+    <div class='sign-container'>
+        <div class="row">
+            <div class="col col-md-12">
+                <div class="row">
+                    <h4 class="col col-md-12 sign-text">Register now!</h4>
+                </div>
+                <div class="vspace1"></div>
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">Name</span>
+                    <input ng-model="name" type="text" class="form-control signup-ic" placeholder="enter your name here" aria-describedby="sizing-addon2"
+                        required>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">Email Address</span>
+                    <input ng-model="email" type="email" class="form-control signup-ic" placeholder="enter your email here" aria-describedby="sizing-addon2"
+                        required>
+                </div><br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">Password</span>
+                    <input ng-model="pass" type="password" class="form-control signup-ic" placeholder="enter your password here" aria-describedby="sizing-addon2"
+                        required>
+                </div>
+                <div class="vspace2"></div>
+
+                <div class="col">
+                    <button ng-click="handleSignUp()" type="button" class="btn btn-primary btn-lg sign-button">Sign Up</button></div>
+                <div class="vspace1"></div>
+                <h6 class="col col-md-12 sign-text" ng-class="{ 'green': infoType=='green' , 'red': infoType=='red'}" ng-cloak>{{info}}</h6>
+                <div class="vspace1 "></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class='container-fluid dashtab-container'>
+    <div class='container'>
+        <div class='vspace4'></div>
+        <div class='row'>
+            <div class='col col-md-12'>
+                <div class='dashtab-widget'>
+                    <div class='dashtab-widget-header'>Exchange Rate</div>
+                    <div class='page-header conv-text'>{{convText}}</div>
+                </div>
+            </div>
+
+            <div class='col col-md-6'>
+                <div class='dashtab-widget'>
+                    <div class='dashtab-widget-header'>Recent Activity</div>
+                    <div ng-repeat='tx in txs' class='row tx-list'>
+                        <span class='col col-xs-4 txt-center'>{{tx.date}}</span>
+                        <span class='col col-xs-4 tx-list-click' ng-click='openTx(tx.id)'>{{tx.amount}}</span>
+                        <span class='col col-xs-4 txt-center'>{{tx.tx}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class='col col-md-6'>
+                <div class='dashtab-widget'>
+                    <div class='dashtab-widget-header'>Account Balance</div>
+                    <div class='page-header balance-text'>{{bCBalance}}</div>
+                </div>
+            </div>
+
+            <div class='col col-md-12'>
+                <div class='dashtab-widget'>
+                    <div class='dashtab-widget-header'>Feeds</div>
+                    <div ng-repeat='f in feeds' class='col feed-entry'>
+                        <div class="feed-title"><a target="_blank" href="{{f.link}}">{{f.title}}</a></div>
+                        <div class="feed-content">{{f.content}}</div>
+                    </div>
+                    <div class="vspace2"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

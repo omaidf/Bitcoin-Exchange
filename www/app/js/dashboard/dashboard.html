@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row bg-blue">
+        <nav class="navbar app-header">
+            <div class="container-fluid">
+                <div class="">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a class='header-logo' href="/">applogo</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="" ng-click="logout()">log out</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="row dashboard-menu">
+        <uib-tabset active="activeJustified" justified="true">
+            <uib-tab index="0">
+                <uib-tab-heading><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp; &nbsp; Dashboard</uib-tab-heading>
+                <section ng-include="'app/js/dashboard/dashtab0.html'"></section>
+            </uib-tab>
+            <uib-tab index="1">
+                <uib-tab-heading><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>&nbsp; &nbsp; Buy/Sell</uib-tab-heading>
+                <section ng-include="'app/js/dashboard/dashtab1.html'"></section>
+            </uib-tab>
+            <uib-tab index="2">
+                <uib-tab-heading><span class="glyphicon glyphicon-send" aria-hidden="true"></span>&nbsp; &nbsp; Send/Request</uib-tab-heading>
+                <section ng-include="'app/js/dashboard/dashtab2.html'"></section>
+            </uib-tab>
+            <uib-tab index="3">
+                <uib-tab-heading><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp; &nbsp; Settings</uib-tab-heading>
+                <section ng-include="'app/js/dashboard/dashtab3.html'"></section>
+            </uib-tab>
+        </uib-tabset>
+    </div>
+</div>
